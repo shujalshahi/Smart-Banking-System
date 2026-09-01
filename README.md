@@ -166,13 +166,13 @@ MERN-Banking-System/
 │
 └── README.md
 
-
+```
 # MongoDB Collections
 
 ## Users
 
-
-Stores login and user information.
+# Admin side
+Stores admin information.
 
 ```json
 {
@@ -181,11 +181,11 @@ Stores login and user information.
   "password": "admin123",
   "role": "Admin"
 }
-```
 
+```
 ---
 
-## customers
+# customers
 
 Stores customer details.
 
