@@ -1,0 +1,233 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.login-page-content {
+    width: 100%;
+    min-height: 100vh;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #f4f7fb;
+    color: #111827;
+    overflow-x: hidden;
+}
+
+
+/* ==========================================================================
+   SCROLLBAR
+   ========================================================================== */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #cbd5e1;
+    border-radius: 20px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #94a3b8;
+}
+
+
+/* ==========================================================================
+   LINKS & BUTTONS
+   ========================================================================== */
+a {
+    text-decoration: none;
+}
+
+button {
+    font-family: inherit;
+}
+
+
+/* ==========================================================================
+   LAYOUT CONTROL
+   ========================================================================== */
+.layout {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* DESKTOP PAGE CONTENT CONTAINER */
+.page-content {
+    margin-left: 260px;
+    width: 100%;
+    padding: 100px 30px 40px; /* Safe default desktop padding */
+    transition: 0.3s ease;
+}
+
+
+/* ==========================================================================
+   COMMON CARDS & TITLES
+   ========================================================================== */
+.dashboard-card,
+.branch-card,
+.transaction-card,
+.customer-stats-card {
+    background: white;
+    border-radius: 22px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+    border: 1px solid #edf1f7;
+    transition: 0.3s ease;
+}
+
+.dashboard-card:hover,
+.branch-card:hover,
+.transaction-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 14px 30px rgba(0,0,0,0.12);
+}
+
+.page-title,
+.dashboard-title,
+.customers-title,
+.transactions-title,
+.branches-title {
+    font-size: 2.2rem;
+    color: #111827;
+    margin-bottom: 8px;
+    font-weight: 700;
+}
+
+.page-subtitle,
+.dashboard-subtitle,
+.customers-subtitle,
+.transactions-subtitle,
+.branches-subtitle {
+    color: #6b7280;
+    font-size: 1rem;
+    margin-bottom: 28px;
+}
+
+
+/* ==========================================================================
+   COMMON TABLES
+   ========================================================================== */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th {
+    background: #f8fafc;
+    color: #374151;
+    padding: 18px;
+    text-align: left;
+    font-size: 0.95rem;
+}
+
+td {
+    padding: 18px;
+    border-top: 1px solid #edf1f7;
+    color: #4b5563;
+}
+
+input {
+    font-family: inherit;
+}
+
+.customers-table-container,
+.transactions-table-container {
+    overflow-x: auto;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+
+/* ==========================================================================
+   📱 TABLET ADJUSTMENTS (max-width: 768px)
+   ========================================================================== */
+@media (max-width: 768px) {
+    .page-content {
+        margin-left: 80px;
+        /* Bottom padding adjusted to 90px to clear the mobile nav bar */
+        padding: 95px 18px 90px; 
+    }
+
+    .page-title,
+    .dashboard-title,
+    .customers-title,
+    .transactions-title,
+    .branches-title {
+        font-size: 1.8rem;
+    }
+
+    .dashboard-grid,
+    .transactions-stats,
+    .branches-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .customers-header,
+    .transactions-header,
+    .branches-header,
+    .dashboard-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .add-customer-btn,
+    .new-transaction-btn,
+    .add-branch-btn {
+        width: 100%;
+    }
+}
+
+
+/* ==========================================================================
+   📱 MOBILE PHONE ADJUSTMENTS (max-width: 500px)
+   ========================================================================== */
+@media (max-width: 500px) {
+    .page-content {
+        margin-left: 0;
+        /* Bottom padding adjusted to 95px to clear bottom nav bars on small displays */
+        padding: 90px 14px 95px; 
+    }
+
+    .page-title,
+    .dashboard-title,
+    .customers-title,
+    .transactions-title,
+    .branches-title {
+        font-size: 1.5rem;
+    }
+
+    th,
+    td {
+        padding: 14px;
+        font-size: 0.9rem;
+    }
+
+    .branch-modal,
+    .branch-form-modal,
+    .transaction-modal {
+        padding: 20px;
+        border-radius: 18px;
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .dashboard-card,
+    .branch-card,
+    .transaction-card {
+        padding: 20px;
+    }
+
+    .card-content h2 {
+        font-size: 1.5rem;
+    }
+}

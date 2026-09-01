@@ -1,0 +1,199 @@
+.settings-page {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 30px;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.settings-header {
+    margin-bottom: 30px;
+}
+
+.settings-title {
+    color: #0f172a;
+    font-size: 28px;
+    font-weight: 700;
+    margin: 0 0 5px 0;
+}
+
+.settings-subtitle {
+    color: #64748b;
+    font-size: 14px;
+    margin: 0;
+}
+
+/* GRID CONTAINER */
+.settings-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+}
+
+/* CARDS */
+.settings-card {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    border: 1px solid #e2e8f0;
+}
+
+/* ICONS */
+.card-header-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+.pass-icon {
+    background-color: #eff6ff;
+    color: #2563eb;
+}
+
+.pin-icon {
+    background-color: #fef2f2;
+    color: #dc2626;
+}
+
+/* CARD TYPOGRAPHY */
+.settings-card h2 {
+    color: #1e293b;
+    font-size: 18px;
+    margin: 0 0 10px 0;
+}
+
+.settings-card p {
+    color: #64748b;
+    font-size: 13px;
+    line-height: 1.5;
+    margin: 0 0 25px 0;
+}
+
+/* FORM ELEMENTS */
+.settings-input-group {
+    margin-bottom: 20px;
+}
+
+.settings-input-group label {
+    display: block;
+    font-size: 13px;
+    font-weight: 600;
+    color: #475569;
+    margin-bottom: 6px;
+}
+
+.settings-input-group input {
+    width: 100%;
+    padding: 10px 14px;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    font-size: 14px;
+    color: #1e293b;
+    outline: none;
+    box-sizing: border-box;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.settings-input-group input:focus {
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15);
+}
+
+/* BUTTONS */
+.settings-submit-btn {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #ffffff;
+    cursor: pointer;
+    transition: opacity 0.2s;
+}
+
+.settings-submit-btn:hover {
+    opacity: 0.9;
+}
+
+.pass-btn {
+    background-color: #2563eb;
+}
+
+.pin-btn {
+    background-color: #dc2626;
+}
+
+
+/* ==========================================================================
+   📱 TABLET BREAKPOINT (max-width: 768px)
+   ========================================================================== */
+@media (max-width: 768px) {
+    /* Safe mobile spacing reset & nav padding offset */
+    .settings-page {
+        margin-left: 0 !important;
+        padding: 20px 16px 90px 16px !important;
+    }
+
+    .settings-container {
+        /* Force single-column on medium tablets and below */
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .settings-title {
+        font-size: 24px;
+    }
+}
+
+
+/* ==========================================================================
+   📱 MOBILE PHONE BREAKPOINT (max-width: 500px)
+   ========================================================================== */
+@media (max-width: 500px) {
+    .settings-page {
+        padding: 15px 12px 95px 12px !important;
+    }
+
+    .settings-title {
+        font-size: 22px;
+    }
+
+    .settings-subtitle {
+        font-size: 13px;
+    }
+
+    /* Slightly compress card spacing to fit tight mobile viewports */
+    .settings-card {
+        padding: 20px 16px;
+        border-radius: 10px;
+    }
+
+    .card-header-icon {
+        width: 44px;
+        height: 44px;
+        font-size: 20px;
+        margin-bottom: 16px;
+    }
+
+    .settings-card p {
+        margin-bottom: 20px;
+    }
+
+    .settings-input-group input {
+        padding: 11px 12px; /* Marginally larger touch target height */
+        font-size: 15px; /* Prevents iOS auto-zoom on form inputs */
+    }
+
+    .settings-submit-btn {
+        padding: 14px;
+        font-size: 15px;
+    }
+}
